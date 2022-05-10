@@ -1,0 +1,133 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@font-face {
+	font-family: "VT323";
+	src: url(font/VT323/VT323-Regular.ttf);
+}
+
+html{
+	font-family: "VT323"
+}
+
+
+.landingBody{
+    background-image: url("landing.png");
+	height: 100vh;
+    width: 100vw;
+	background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.landingSentence{
+	display: flex;
+	position: relative;
+	-webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  	font-size: 80px;
+	margin: 2rem;
+}
+
+.landingSentence span {
+	position: relative;
+  	display: inline-block;
+  	color: #000000;
+  	text-transform: uppercase;
+  	animation: landingSentence 1s infinite;
+  	animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes landingSentence {
+	0%,40%,100% {
+	  transform: translateY(0)
+	}
+	20% {
+	  transform: translateY(-20px)
+	}
+  }
+
+.landingBtn {
+	background: #000000;
+	color: #FEF7A7;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 3.2rem;
+	margin: 3rem;
+	min-width: 200px;
+	padding: .5rem;
+	text-transform: uppercase;
+	width: auto;
+	font-family: VT323;
+	box-shadow:  1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+}
+
+.landingBtn:active { 
+	background: #FEF7A7; 
+	color: black;
+	box-shadow: 0px 0px 0px 0px;
+}
+
+@keyframes pulsation_bouton {
+	from{
+		box-shadow:0 0 0 -3px hsla(0,0%,100%,0),0 0 0 0 hsl(44,66%,57%)		
+		}
+	to{
+		box-shadow:0 0 0 10px hsla(0,0%,100%,0),0 0 0 13px hsla(0,0%,100%,0)}
+		}
+
+.landingBtn:active {
+	animation:pulsation_bouton .1s ;
+}
+
+	
+
