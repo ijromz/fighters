@@ -16,7 +16,7 @@
         </section>
 
         <section class="landingSectionBtn">
-            <a href=""><button class="landingBtn">Play</button></a>
+            <a href=""><button class="landingBtn">Start</button></a>
         </section>
     </main>
 </body>
