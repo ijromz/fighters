@@ -1,0 +1,172 @@
+/* Signup & login page */
+
+.container{
+    width:400px;
+    margin:0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Bordered form */
+form {
+    width:100%;
+    padding: 30px;
+    border: 1px solid darkblue;
+    background-color: rgba(128, 128, 128, 0.586);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.container h1{
+    font-family: "VT323";
+    font-size: 75px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+
+input[type=submit] {
+    font-family: "VT323";
+    font-size: 1.5em;
+    background-color: #FEF7A7;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit {
+    font-weight: bold;
+}
+
+input[type=button] {
+    font-family: "VT323";
+    font-size: 1.5em;
+    background-color: black;
+    color: #FEF7A7;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: VT323;
+    src: url(../fonts/VT323-Regular.woff);
+}
+
+/* Landing page */
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+	font-family: "VT323"
+}
+
+
+.landingBody{
+    background-image: url("../img/lobby.png");
+	height: 100vh;
+    width: 100vw;
+	background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.landingSentence{
+	display: flex;
+	position: relative;
+	-webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  	font-size: 80px;
+	margin: 2rem;
+}
+
+.landingSentence span {
+	position: relative;
+  	display: inline-block;
+  	color: #000000;
+  	text-transform: uppercase;
+  	animation: landingSentence 1s infinite;
+  	animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes landingSentence {
+	0%,40%,100% {
+	  transform: translateY(0)
+	}
+	20% {
+	  transform: translateY(-20px)
+	}
+  }
+
+.landingBtn {
+	background: #000000;
+	color: #FEF7A7;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 3.2rem;
+	margin: 3rem;
+	min-width: 200px;
+	padding: .5rem;
+	text-transform: uppercase;
+	width: auto;
+	font-family: "VT323";
+	box-shadow:  1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+}
+
+.landingBtn:active { 
+	background: #FEF7A7; 
+	color: black;
+	box-shadow: 0px 0px 0px 0px;
+}
+
+@keyframes pulsation_bouton {
+	from{
+		box-shadow:0 0 0 -3px hsla(0,0%,100%,0),0 0 0 0 hsl(44,66%,57%)		
+		}
+	to{
+		box-shadow:0 0 0 10px hsla(0,0%,100%,0),0 0 0 13px hsla(0,0%,100%,0)}
+		}
+
+.landingBtn:active {
+	animation:pulsation_bouton .1s ;
+}
