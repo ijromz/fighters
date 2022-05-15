@@ -6,5 +6,5 @@ Pour se deplacer vous utiliserez les fleches directionelles
 Pour tirer vous utiliserez la barre espace 
 Pour acceder au jeux tout d’abord vous devrer vous creer un compte
 
-Le jeux se lance via un serveur local , ensuite inserer ce chemin dans la barre de navigation localhost:8888/spaceinvaders/ pour un mac (MAMP)
-                  localhost:/spaceinvaders/  pour un pc (WAMP)
+Le jeux se lance via un serveur local , ensuite inserer ce chemin dans la barre de navigation localhost:8888/kosmik_game/ pour un mac (MAMP)
+                  localhost:/kosmik_game/  pour un pc (WAMP)
